@@ -2,10 +2,10 @@
 /* Default settings; can be overriden by command line. */
 
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom */
-static int opacity = 1;                     /* -o  option; if 0, then alpha is disabled */
+static int opacity = 0;                     /* -o  option; if 0, then alpha is disabled */
 static int fuzzy = 1;                       /* -F  option; if 0, dmenu doesn't use fuzzy matching */
 static int center = 0;                      /* -c  option; if 0, dmenu won't be centered on the screen */
-static int min_width = 500;                 /* minimum width when centered */
+static int min_width = 650;                 /* minimum width when centered */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static char *fonts[] =
 {
@@ -28,13 +28,13 @@ static const unsigned int alphas[][3]      = {
 static
 char *colors[][2] = {
 	/*               fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
-	[SchemeSel]  = { "#eeeeee", "#005577" },
-	[SchemeOut]  = { "#000000", "#00ffff" },
-	[SchemeBorder] = { "#000000", "#005577" },
-	[SchemeMid]  = { "#eeeeee", "#770000" },
-	[SchemeSelHighlight]  = { "#ffc978", "#005577" },
-	[SchemeNormHighlight] = { "#ffc978", "#222222" },
+	[SchemeNorm] = { "#cccccc", "#282c34" },
+	[SchemeSel]  = { "#1c1f24", "#c678dd" },
+	[SchemeOut]  = { "#000000", "#51afef" },
+	[SchemeBorder] = { "#000000", "#c678dd" },
+	[SchemeMid]  = { "#d7d7d7", "#1c1f24" },
+	[SchemeSelHighlight]  = { "#98be65", "#000000" },
+	[SchemeNormHighlight] = { "#98be65", "#000000" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 0;
