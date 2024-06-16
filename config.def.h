@@ -25,17 +25,8 @@ static const unsigned int alphas[][3]      = {
 	[SchemeNormHighlight] = { OPAQUE, baralpha, borderalpha },
 };
 
-static
-char *colors[SchemeLast][2] = {
-	/*               fg         bg       */
-	[SchemeNorm] = { "#cccccc", "#282c34" },
-	[SchemeSel]  = { "#1c1f24", "#c678dd" },
-	[SchemeSelHighlight]  = { "#98be65", "#000000" },
-	[SchemeNormHighlight] = { "#98be65", "#000000" },
-	[SchemeOut]  = { "#000000", "#51afef" },
-	[SchemeMid]  = { "#d7d7d7", "#1c1f24" },
-	[SchemeBorder] = { "#000000", "#c678dd" },
-};
+#include "doom-one.h"
+
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 0;
 /* -g option; if nonzero, dmenu uses a grid comprised of columns and lines */
